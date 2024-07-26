@@ -5,10 +5,17 @@ This project focuses on detecting P&ID (Piping and Instrumentation Diagram) symb
 Features:-
 
 Advanced Detection: Utilizes YOLOv8 and the SAHI library for high-precision P&ID symbol detection.
+
 OCR Integration: Incorporates OCR to accurately recognize and extract text information from schematic images.
+
 User-Friendly Interface: Implemented in Streamlit to provide an accessible and interactive user experience.
-Technologies Used
+
+Technologies Used:-
+
 YOLOv8: For object detection and classification.
+
 SAHI Library: Enhances the performance and accuracy of object detection.
+
 OCR (Optical Character Recognition): Recognizes and extracts text from images.
+
 Streamlit: Provides an interactive and accessible user interface.
