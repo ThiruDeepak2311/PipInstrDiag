@@ -57,7 +57,6 @@ This project provides an automated solution for processing P&ID diagrams, levera
    - Image standardization
    - Annotation formatting
    - Augmentation pipeline
-   - 
 
 ## Deployment
 
