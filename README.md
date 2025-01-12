@@ -1,21 +1,87 @@
-Project Overview:-
+# P&ID Symbol Detection System
 
-This project focuses on detecting P&ID (Piping and Instrumentation Diagram) symbols from schematic images using advanced computer vision (CV) and deep learning (DL) techniques. By leveraging YOLOv8, the SAHI library, and Optical Character Recognition (OCR), the system enhances detection performance and accuracy. The detection system is implemented in Streamlit to provide easy accessibility and user interaction.
+A computer vision-based system for detecting and extracting P&ID (Piping and Instrumentation Diagram) components from schematic diagrams. The system uses deep learning to identify components and generates a master list of detected elements.
 
-Features:-
+## Overview
 
-Advanced Detection: Utilizes YOLOv8 and the SAHI library for high-precision P&ID symbol detection.
+This project provides an automated solution for processing P&ID diagrams, leveraging computer vision and deep learning techniques to detect and classify various industrial components. The system supports multiple input formats (.pdf/.jpeg/.png) and generates both visual and data outputs.
 
-OCR Integration: Incorporates OCR to accurately recognize and extract text information from schematic images.
+## Features
 
-User-Friendly Interface: Implemented in Streamlit to provide an accessible and interactive user experience.
+- Automated P&ID component detection
+- Support for multiple input formats (PDF, JPEG, PNG)
+- Region of Interest (ROI) based component detection
+- Annotated output images with component labels
+- CSV export of detected components
+- Standalone application deployment
+- Deep learning-based symbol recognition
 
-Technologies Used:-
+## Technical Architecture
 
-YOLOv8: For object detection and classification.
+### Input Processing
+- Support for multiple file formats:
+  - PDF documents
+  - JPEG images
+  - PNG images
+- Automatic image preprocessing and enhancement
+- ROI (Region of Interest) detection
 
-SAHI Library: Enhances the performance and accuracy of object detection.
+### Deep Learning Model
+- Based on YOLOv5/YOLOv8 architecture
+- Pre-trained on P&ID symbol datasets
+- Custom training support for specific symbol sets
+- ISO Standard compliance
 
-OCR (Optical Character Recognition): Recognizes and extracts text from images.
+### Output Generation
+1. Annotated Images:
+   - Visual component identification
+   - Component labeling
+   - Bounding box visualization
 
-Streamlit: Provides an interactive and accessible user interface.
+2. Master Component List:
+   - CSV format output
+   - Component categorization
+   - Location information
+   - Reference identifiers
+
+
+## Model Training
+
+### Dataset Preparation
+1. Collect P&ID diagrams from:
+   - ISO standards
+   - Open-source datasets
+   - Industry standard diagrams
+
+2. Data Preprocessing:
+   - Image standardization
+   - Annotation formatting
+   - Augmentation pipeline
+   - 
+
+## Deployment
+
+### Docker Container
+```bash
+docker build -t pid-detector .
+docker run -p 8501:8501 pid-detector
+```
+
+### Cloud Deployment
+- AWS/Azure/GCP compatible
+- Containerized deployment support
+- API endpoint configuration
+
+## References
+
+1. [Academic Paper on P&ID Recognition](https://academic.oup.com/jcde/article/9/4/1298/6611631)
+2. [YOLOv5 for Symbol Extraction](https://www.researchgate.net/publication/366123842_YOLOv5_for_symbol_extraction_in_PID_diagrams)
+3. [P&ID Standards Documentation](https://instrumentationandcontrol.net/pid-diagram-basics-part-2-standards.html)
+
+## Dataset Sources
+
+- [Roboflow P&ID Dataset](https://universe.roboflow.com/new-workspace-ojauf/pidnfu5r/)
+- ISO Standard P&ID Symbols
+- Custom annotated datasets
+
+---
